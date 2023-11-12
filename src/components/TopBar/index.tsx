@@ -18,7 +18,9 @@ export const TopBar = () => {
     <BoxContainer variant="top">
       <Circle
         onPress={() => {
-          Linking.openURL('https://google.com')
+          Linking.openURL(
+            'https://github.com/dev-rafaelmachado/distinct-colors',
+          )
         }}
         side="top"
         color={secondary}

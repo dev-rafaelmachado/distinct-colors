@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { MainContainer } from './src/styles/GlobalStyles'
+import { TopBar } from './src/components/TopBar'
+import { BottomBar } from './src/components/BottomBar'
+import { Wrapper } from './Wrapper'
+import { GameBox } from './src/components/GameBox'
+import { Score } from './src/components/Score'
+import { Difficult } from './src/components/Difficult'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Wrapper>
+      <MainContainer>
+        <TopBar />
+        <Score />
+        <GameBox />
+        <Difficult />
+        <BottomBar />
+      </MainContainer>
+    </Wrapper>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

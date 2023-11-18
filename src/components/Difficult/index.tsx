@@ -2,13 +2,6 @@ import { Text, View } from 'react-native'
 import { useGame } from '../../hooks/useGame'
 import { useTheme } from 'styled-components'
 
-const difficultiesTraduction = {
-  easy: 'Fácil',
-  medium: 'Médio',
-  hard: 'Difícil',
-  climb: 'Escalada',
-}
-
 export const Difficult = () => {
   const { difficulty } = useGame()
   const { body, text } = useTheme()
@@ -36,7 +29,7 @@ export const Difficult = () => {
             color: body,
           }}
         >
-          {difficultiesTraduction[difficulty]}
+          {difficulty.toLocaleUpperCase()}
         </Text>
       </View>
     </View>

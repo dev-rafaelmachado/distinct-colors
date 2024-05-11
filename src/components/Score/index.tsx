@@ -1,10 +1,9 @@
 import { Text, View } from 'react-native'
-import { useScore } from '../../hooks/useScore'
 import { useTheme } from 'styled-components'
 import { useGame } from '../../hooks/useGame'
 
 export const Score = () => {
-  const { score, record } = useScore()
+  const { score, record } = useGame()
   const { difficulty } = useGame()
   const { text } = useTheme()
   return (
